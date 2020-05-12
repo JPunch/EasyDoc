@@ -1,0 +1,60 @@
+body
+{
+    padding-top: 2px;
+    background: #f5f7f8;
+}
+.grid-1
+{
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+.grid-1 button
+{
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* .grid-1 div:hover
+{
+    opacity: 50%;
+} */
+.placeholder
+{
+    background-color: rgb(0, 255, 255);
+    text-align: left;
+    vertical-align: middle;
+    line-height: auto;
+    grid-column: auto;
+}
+.placeholder h3
+{
+    text-align: center;
+}
+
+.function-retract
+{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: repeat(auto-fill, minmax(9em, 1fr)); */
+    grid-gap: 10px;
+}
+.function-active
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    grid-gap: 3px;
+}
+.function-container > div
+{
+    background-color: rgba(0, 0, 0, 10%);
+}
+
+.active
+{
+    background-color: rgba(0, 0, 0);
+}
