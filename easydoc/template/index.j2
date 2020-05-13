@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta class="description" content="">
+        <meta class="keywords" content="">
+        <meta class="author" content="">
+        <meta class="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Documentation made painless/intellijently</title>
+    </head>
+    <body>
+        <header></header>
+        <section class="grid-1">
+        {% for cls in classes %}
+            <button class="placeholder" onclick="toggleActive(this)">
+                <h3>{{ cls['name'] }}</h3>
+                <div class="function-retract">
+                    {% for method in cls['methods'] %}
+                    <div class="function">{{ method['name'] }}</div>
+                    {% endfor %}
+                </div>
+            </button>
+        {% endfor %}
+        </section>
+        <script src="js/scripts.js"></script>
+        <footer></footer>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+{
+    "classes":
+    [
+        {
+            "name": "Class 1",
+            "methods":
+            [
+                {
+                    "name": "Constructor",
+                    "params": ["foo", "bar"]
+                },
+                {
+                    "name": "Method 1",
+                    "params": ["foo", "bar"]
+                },
+                {
+                    "name": "Method 2",
+                    "params": ["foo", "bar", "foobar"]
+                }
+            ]
+        },
+        {
+            "name": "Class 2",
+
+            "methods":
+            [
+                {
+                    "name": "Constructor",
+                    "params": ["foo", "bar"]
+                },
+                {
+                    "name": "Method 1",
+                    "params": ["foo", "bar"]
+                },
+                {
+                    "name": "Method 2",
+                    "params": ["foo", "bar", "foobar"]
+                }
+            ]
+        },
+        {
+            "name": "Class 3",
+            "methods":
+            [
+                {
+                    "name": "Constructor",
+                    "params": ["foo", "bar"]
+                },
+                {
+                    "name": "Method 1",
+                    "params": ["foo", "bar"]
+                },
+                {
+                    "name": "Method 2",
+                    "params": ["foo", "bar", "foobar"]
+                }
+            ]
+        },
+        {
+            "name": "Class 4",
+            "methods":
+            [
+                {
+                    "name": "Constructor",
+                    "params": ["foo", "bar"]
+                },
+                {
+                    "name": "Method 1",
+                    "params": ["foo", "bar"]
+                },
+                {
+                    "name": "Method 2",
+                    "params": ["foo", "bar", "foobar"]
+                }
+            ]
+        }
+    ]
+}
