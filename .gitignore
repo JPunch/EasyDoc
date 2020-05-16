@@ -1,0 +1,8 @@
+.vscode
+.pytest_cache
+*.egg-info
+poetry.lock
+
+site/index.html
+
+**/__pycache__
