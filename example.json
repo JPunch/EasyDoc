@@ -3,19 +3,45 @@
     [
         {
             "name": "Class 1",
+            "description": "Blah blah",
+            "members":
+            [
+                {"type": "int", "name": "some_int", "description": "Some integer"},
+                {"type": "unsigned int", "name": "allocator", "description": " Another variable"},
+                {"type": "float", "name": "some_float", "description": "Something someting"},
+                {"type": "long", "name": "some_long", "description": "Lorem ipsum latin latin"},
+                {"type": "something", "name": "some_var", "description": "Some custom data type here"}
+            ],
             "methods":
             [
                 {
                     "name": "Constructor",
-                    "params": ["foo", "bar"]
+                    "description": "Constructs a new container from a variety of data sources, optionally using a user supplied allocator alloc.",
+                    "params": [
+                        {"type": "int", "name": "alloc", "descripton": "allocator to use for all memory allocations of this container"},
+                        {"type": "int", "name": "count", "descripton": "the size of the container"},
+                        {"type": "int", "name": "value", "descripton": "the value to initialize elements of the container with"},
+                        {"type": "int", "name": "first", "descripton": "the range to copy the elements from"},
+                        {"type": "int", "name": "last", "descripton": "another container to be used as source to initialize the elements of the container with"},
+                        {"type": "int", "name": "other", "descripton": "initializer list to initialize the elements of the container with"}
+                    ],
+                    "returns": { "type": "*std::vector<T>", "description": "The vector constructed by the constructor."}
                 },
                 {
-                    "name": "Method 1",
-                    "params": ["foo", "bar"]
+                    "name": "operator[]",
+                    "description": "Returns a reference to the element at specified location pos. No bounds checking is performed.",
+                    "params": [{"type": "size_type", "name": "pos", "description": "position of the element to return"}],
+                    "returns": {"type": "T&", "description": "Reference to the requested element."}
                 },
                 {
-                    "name": "Method 2",
-                    "params": ["foo", "bar", "foobar"]
+                    "name": "push_back",
+                    "params": [{"type": "const T&", "name": "value", "description": "The value of the element to append."}],
+                    "returns": ""
+                },
+                {
+                    "name": "data",
+                    "params": [],
+                    "returns": {"type": "T*", "description": "Pointer to the underlying element storage. For non-empty containers, the returned pointer compares equal to the address of the first element."}
                 }
             ]
         },
@@ -26,51 +52,139 @@
             [
                 {
                     "name": "Constructor",
-                    "params": ["foo", "bar"]
+                    "description": "Constructs a new container from a variety of data sources, optionally using a user supplied allocator alloc.",
+                    "params": [
+                        {"type": "int", "name": "alloc", "descripton": "allocator to use for all memory allocations of this container"},
+                        {"type": "int", "name": "count", "descripton": "the size of the container"},
+                        {"type": "int", "name": "value", "descripton": "the value to initialize elements of the container with"},
+                        {"type": "int", "name": "first", "descripton": "the range to copy the elements from"},
+                        {"type": "int", "name": "last", "descripton": "another container to be used as source to initialize the elements of the container with"},
+                        {"type": "int", "name": "other", "descripton": "initializer list to initialize the elements of the container with"}
+                    ],
+                    "returns": { "type": "*std::vector<T>", "description": "The vector constructed by the constructor."}
                 },
                 {
-                    "name": "Method 1",
-                    "params": ["foo", "bar"]
+                    "name": "operator[]",
+                    "description": "Returns a reference to the element at specified location pos. No bounds checking is performed.",
+                    "params": [{"type": "size_type", "name": "pos", "description": "position of the element to return"}],
+                    "returns": {"type": "T&", "description": "Reference to the requested element."}
                 },
                 {
-                    "name": "Method 2",
-                    "params": ["foo", "bar", "foobar"]
+                    "name": "push_back",
+                    "params": [{"type": "const T&", "name": "value", "description": "The value of the element to append."}],
+                    "returns": ""
+                },
+                {
+                    "name": "data",
+                    "params": [],
+                    "returns": {"type": "T*", "description": "Pointer to the underlying element storage. For non-empty containers, the returned pointer compares equal to the address of the first element."}
                 }
             ]
-        },
-        {
-            "name": "Class 3",
+        },      {
+            "name": "Class 2",
+
             "methods":
             [
                 {
                     "name": "Constructor",
-                    "params": ["foo", "bar"]
+                    "description": "Constructs a new container from a variety of data sources, optionally using a user supplied allocator alloc.",
+                    "params": [
+                        {"type": "int", "name": "alloc", "descripton": "allocator to use for all memory allocations of this container"},
+                        {"type": "int", "name": "count", "descripton": "the size of the container"},
+                        {"type": "int", "name": "value", "descripton": "the value to initialize elements of the container with"},
+                        {"type": "int", "name": "first", "descripton": "the range to copy the elements from"},
+                        {"type": "int", "name": "last", "descripton": "another container to be used as source to initialize the elements of the container with"},
+                        {"type": "int", "name": "other", "descripton": "initializer list to initialize the elements of the container with"}
+                    ],
+                    "returns": { "type": "*std::vector<T>", "description": "The vector constructed by the constructor."}
                 },
                 {
-                    "name": "Method 1",
-                    "params": ["foo", "bar"]
+                    "name": "operator[]",
+                    "description": "Returns a reference to the element at specified location pos. No bounds checking is performed.",
+                    "params": [{"type": "size_type", "name": "pos", "description": "position of the element to return"}],
+                    "returns": {"type": "T&", "description": "Reference to the requested element."}
                 },
                 {
-                    "name": "Method 2",
-                    "params": ["foo", "bar", "foobar"]
+                    "name": "push_back",
+                    "params": [{"type": "const T&", "name": "value", "description": "The value of the element to append."}],
+                    "returns": ""
+                },
+                {
+                    "name": "data",
+                    "params": [],
+                    "returns": {"type": "T*", "description": "Pointer to the underlying element storage. For non-empty containers, the returned pointer compares equal to the address of the first element."}
                 }
             ]
         },
         {
-            "name": "Class 4",
+            "name": "Class 2",
+
             "methods":
             [
                 {
                     "name": "Constructor",
-                    "params": ["foo", "bar"]
+                    "description": "Constructs a new container from a variety of data sources, optionally using a user supplied allocator alloc.",
+                    "params": [
+                        {"type": "int", "name": "alloc", "descripton": "allocator to use for all memory allocations of this container"},
+                        {"type": "int", "name": "count", "descripton": "the size of the container"},
+                        {"type": "int", "name": "value", "descripton": "the value to initialize elements of the container with"},
+                        {"type": "int", "name": "first", "descripton": "the range to copy the elements from"},
+                        {"type": "int", "name": "last", "descripton": "another container to be used as source to initialize the elements of the container with"},
+                        {"type": "int", "name": "other", "descripton": "initializer list to initialize the elements of the container with"}
+                    ],
+                    "returns": { "type": "*std::vector<T>", "description": "The vector constructed by the constructor."}
                 },
                 {
-                    "name": "Method 1",
-                    "params": ["foo", "bar"]
+                    "name": "operator[]",
+                    "description": "Returns a reference to the element at specified location pos. No bounds checking is performed.",
+                    "params": [{"type": "size_type", "name": "pos", "description": "position of the element to return"}],
+                    "returns": {"type": "T&", "description": "Reference to the requested element."}
                 },
                 {
-                    "name": "Method 2",
-                    "params": ["foo", "bar", "foobar"]
+                    "name": "push_back",
+                    "params": [{"type": "const T&", "name": "value", "description": "The value of the element to append."}],
+                    "returns": ""
+                },
+                {
+                    "name": "data",
+                    "params": [],
+                    "returns": {"type": "T*", "description": "Pointer to the underlying element storage. For non-empty containers, the returned pointer compares equal to the address of the first element."}
+                }
+            ]
+        },
+        {
+            "name": "Class 2",
+
+            "methods":
+            [
+                {
+                    "name": "Constructor",
+                    "description": "Constructs a new container from a variety of data sources, optionally using a user supplied allocator alloc.",
+                    "params": [
+                        {"type": "int", "name": "alloc", "descripton": "allocator to use for all memory allocations of this container"},
+                        {"type": "int", "name": "count", "descripton": "the size of the container"},
+                        {"type": "int", "name": "value", "descripton": "the value to initialize elements of the container with"},
+                        {"type": "int", "name": "first", "descripton": "the range to copy the elements from"},
+                        {"type": "int", "name": "last", "descripton": "another container to be used as source to initialize the elements of the container with"},
+                        {"type": "int", "name": "other", "descripton": "initializer list to initialize the elements of the container with"}
+                    ],
+                    "returns": { "type": "*std::vector<T>", "description": "The vector constructed by the constructor."}
+                },
+                {
+                    "name": "operator[]",
+                    "description": "Returns a reference to the element at specified location pos. No bounds checking is performed.",
+                    "params": [{"type": "size_type", "name": "pos", "description": "position of the element to return"}],
+                    "returns": {"type": "T&", "description": "Reference to the requested element."}
+                },
+                {
+                    "name": "push_back",
+                    "params": [{"type": "const T&", "name": "value", "description": "The value of the element to append."}],
+                    "returns": ""
+                },
+                {
+                    "name": "data",
+                    "params": [],
+                    "returns": {"type": "T*", "description": "Pointer to the underlying element storage. For non-empty containers, the returned pointer compares equal to the address of the first element."}
                 }
             ]
         }

@@ -11,18 +11,38 @@
     </head>
     <body>
         <header></header>
-        <section class="grid-1">
-        {% for cls in classes %}
-            <button class="placeholder" onclick="toggleActive(this)">
-                <h3>{{ cls['name'] }}</h3>
-                <div class="function-retract">
+
+        <!-- The container for the grid of all classes -->
+        <section class="maingrid">
+
+            {% for cls in classes %}
+
+                <!-- The container for a class -->
+                <div class="classgrid">
+                    <div class="classname"><h3>{{ cls['name'] }}</h3></div>
+                    {{ cls["description"] }}
                     {% for method in cls['methods'] %}
-                    <div class="function">{{ method['name'] }}</div>
+                    <div class="function">{{ method['name'] }}
+                        {% if len(method['params']) == 0 %}
+                        ()
+                        {% else %}
+                            ({% for param in method['params'] %}
+                                {% if param != method['params'][-1] %}
+                                    <span style="color: blue;">{{ param["type"] }}</span> {{ param["name"] }},
+                                {% else %}
+                                    <span style="color: blue;">{{ param["type"] }}</span> {{ param["name"] }}
+                                {%endif%}
+                            {% endfor %})
+                        {%endif%}
+
+                    </div>
                     {% endfor %}
                 </div>
-            </button>
-        {% endfor %}
+
+            {% endfor %}
+
         </section>
+
         <script src="js/scripts.js"></script>
         <footer></footer>
     </body>
